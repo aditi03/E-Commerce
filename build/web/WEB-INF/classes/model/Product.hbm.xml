@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2017 11:28:08 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Product" table="product" catalog="ecommerce" optimistic-lock="version">
+        <id name="pid" type="string">
+            <column name="pid" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="discount" type="float">
+            <column name="discount" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="price" type="float">
+            <column name="price" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="image" type="string">
+            <column name="image" length="50" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="500" not-null="true" />
+        </property>
+        <set name="orderitems" table="orderitem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="pid" length="50" not-null="true" />
+            </key>
+            <one-to-many class="model.Orderitem" />
+        </set>
+        <one-to-one name="book" class="model.Book"></one-to-one>
+        <one-to-one name="datastorage" class="model.Datastorage"></one-to-one>
+        <one-to-one name="mobiletablet" class="model.Mobiletablet"></one-to-one>
+        <one-to-one name="tops" class="model.Tops"></one-to-one>
+        <one-to-one name="tv" class="model.Tv"></one-to-one>
+        <one-to-one name="ethnics" class="model.Ethnics"></one-to-one>
+        <one-to-one name="headphone" class="model.Headphone"></one-to-one>
+        <one-to-one name="laptop" class="model.Laptop"></one-to-one>
+        <one-to-one name="jeans" class="model.Jeans"></one-to-one>
+        <set name="shares" table="share" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="pid" length="50" not-null="true" />
+            </key>
+            <one-to-many class="model.Share" />
+        </set>
+        <one-to-one name="powerbank" class="model.Powerbank"></one-to-one>
+        <one-to-one name="refoven" class="model.Refoven"></one-to-one>
+        <set name="warehouses" table="warehouse" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="pid" length="50" not-null="true" />
+            </key>
+            <one-to-many class="model.Warehouse" />
+        </set>
+    </class>
+</hibernate-mapping>

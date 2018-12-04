@@ -1,0 +1,134 @@
+<%-- 
+    Document   : wheader
+    Created on : Mar 14, 2017, 7:04:45 PM
+    Author     : Aditi Dandekar
+--%>
+
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Insilico</title>
+    
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+   
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="user-menu">
+                        <ul>
+                            <li>Hello, </li>
+                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="header-right">
+                        <ul class="list-unstyled list-inline">
+                         
+                            
+                        </ul>    
+                </div>
+            </div>
+        </div>
+    </div>
+       </div><!-- End header area -->
+    <div class="site-branding-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo">
+                        <h1><a href="index.html">I<span>nsilico</span></a></h1>
+                    </div>
+                </div>
+                
+                
+            </div> 
+            </div>
+        
+    </div> <!-- End site branding area -->
+
+    <div class="mainmenu-area">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>  
+                </div> 
+                 <form action="#">
+                            <div class="nav-fill">
+                                <div class="nav-search-field">
+                            
+                                <i class="glyphicon glyphicon-search"></i>
+                                <input type="field-keywords" placeholder="Search" tabindex="50" class="nav-input">
+                                <input type="submit" value="Search">
+                            </div></div></form>
+                       
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                          <li>
+                           <!--form here-->  
+                          </li>        
+                        <li>
+                            <a>                  </a> 
+                        </li>
+                        
+                        <li class="active"><a href="home.htm">Home</a></li>
+                      
+			                  
+
+  <li class="dropdown">
+      <button class="dropbtn"><b>ADD STOCK</b></button>
+  <div class="dropdown-content">
+      <a href="whomee.htm">ELECTRONICS</a>
+    <a href="whomec.htm">CLOTHING</a>
+    <a href="whomeb.htm">BOOKS</a>
+  </div>
+  </li>
+  <li class="dropdown">
+      <button class="dropbtn"><b>SHOW OUT OF STOCK</b></button>
+      <div class="dropdown-content">
+      <a href="whomees.htm">ELECTRONICS</a>
+    <a href="whomec.htm">CLOTHING</a>
+    <a href="whomeb.htm">BOOKS</a>
+        </div>
+  </li>
+  
+                    </ul>
+                </div>  
+            </div>
+        </div>
+    </div> <!-- End mainmenu area -->

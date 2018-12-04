@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2017 11:28:08 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Category" table="category" catalog="ecommerce" optimistic-lock="version">
+        <id name="tbl" type="string">
+            <column name="tbl" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="category" type="string">
+            <column name="category" length="50" not-null="true" />
+        </property>
+        <property name="subcategory" type="string">
+            <column name="subcategory" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

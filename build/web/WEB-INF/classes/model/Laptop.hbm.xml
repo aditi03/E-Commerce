@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2017 11:28:08 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Laptop" table="laptop" catalog="ecommerce" optimistic-lock="version">
+        <id name="pid" type="string">
+            <column name="pid" length="50" />
+            <generator class="foreign">
+                <param name="property">product</param>
+            </generator>
+        </id>
+        <one-to-one name="product" class="model.Product" constrained="true"></one-to-one>
+        <property name="name" type="string">
+            <column name="name" length="50" not-null="true" />
+        </property>
+        <property name="price" type="float">
+            <column name="price" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="count" type="int">
+            <column name="count" not-null="true" />
+        </property>
+        <property name="company" type="string">
+            <column name="company" length="50" />
+        </property>
+        <property name="series" type="string">
+            <column name="series" length="500" />
+        </property>
+        <property name="os" type="string">
+            <column name="os" length="50" />
+        </property>
+        <property name="screenSize" type="string">
+            <column name="screen_size" length="50" />
+        </property>
+        <property name="processor" type="string">
+            <column name="processor" length="50" />
+        </property>
+        <property name="ram" type="java.lang.Integer">
+            <column name="ram" />
+        </property>
+        <property name="weight" type="java.lang.Float">
+            <column name="weight" precision="12" scale="0" />
+        </property>
+        <property name="hd" type="string">
+            <column name="hd" length="50" />
+        </property>
+        <property name="model" type="string">
+            <column name="model" length="50" />
+        </property>
+        <property name="modelYear" type="java.lang.Integer">
+            <column name="model_year" />
+        </property>
+        <property name="graphicCard" type="string">
+            <column name="graphic_card" length="50" />
+        </property>
+        <property name="battery" type="java.lang.Integer">
+            <column name="battery" />
+        </property>
+        <property name="color" type="string">
+            <column name="color" length="500" />
+        </property>
+        <property name="ports" type="string">
+            <column name="ports" length="500" />
+        </property>
+        <property name="prospeed" type="string">
+            <column name="prospeed" length="50" />
+        </property>
+        <property name="procount" type="java.lang.Integer">
+            <column name="procount" />
+        </property>
+        <property name="protype" type="string">
+            <column name="protype" length="50" />
+        </property>
+        <property name="warranty" type="string">
+            <column name="warranty" length="50" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2017 11:28:08 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Tv" table="tv" catalog="ecommerce" optimistic-lock="version">
+        <id name="pid" type="string">
+            <column name="pid" length="50" />
+            <generator class="foreign">
+                <param name="property">product</param>
+            </generator>
+        </id>
+        <one-to-one name="product" class="model.Product" constrained="true"></one-to-one>
+        <property name="name" type="string">
+            <column name="name" length="50" not-null="true" />
+        </property>
+        <property name="price" type="float">
+            <column name="price" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="count" type="int">
+            <column name="count" not-null="true" />
+        </property>
+        <property name="company" type="string">
+            <column name="company" length="50" />
+        </property>
+        <property name="size" type="string">
+            <column name="size" length="50" />
+        </property>
+        <property name="connectivity" type="string">
+            <column name="connectivity" length="50" />
+        </property>
+        <property name="warranty" type="string">
+            <column name="warranty" length="50" />
+        </property>
+        <property name="modelNo" type="string">
+            <column name="model_no" length="50" />
+        </property>
+        <property name="resolution" type="string">
+            <column name="resolution" length="50" />
+        </property>
+        <property name="series" type="string">
+            <column name="series" length="50" />
+        </property>
+        <property name="displayType" type="string">
+            <column name="display_type" length="50" />
+        </property>
+        <property name="box" type="string">
+            <column name="box" length="500" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

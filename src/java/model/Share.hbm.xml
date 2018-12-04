@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2017 11:28:08 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Share" table="share" catalog="ecommerce" optimistic-lock="version">
+        <composite-id name="id" class="model.ShareId">
+            <key-property name="toEmailid" type="string">
+                <column name="to_emailid" length="50" />
+            </key-property>
+            <key-property name="fromEmailid" type="string">
+                <column name="from_emailid" length="50" />
+            </key-property>
+            <key-property name="pid" type="string">
+                <column name="pid" length="50" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="product" class="model.Product" update="false" insert="false" fetch="select">
+            <column name="pid" length="50" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userByFromEmailid" class="model.User" update="false" insert="false" fetch="select">
+            <column name="from_emailid" length="50" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userByToEmailid" class="model.User" update="false" insert="false" fetch="select">
+            <column name="to_emailid" length="50" not-null="true" />
+        </many-to-one>
+        <property name="sharedate" type="timestamp">
+            <column name="sharedate" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2017 11:28:08 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.User" table="user" catalog="ecommerce" optimistic-lock="version">
+        <id name="emailid" type="string">
+            <column name="emailid" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" length="50" not-null="true" />
+        </property>
+        <property name="fname" type="string">
+            <column name="fname" length="50" not-null="true" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="50" not-null="true" />
+        </property>
+        <property name="phno" type="string">
+            <column name="phno" length="10" not-null="true" />
+        </property>
+        <property name="addr" type="string">
+            <column name="addr" length="200" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="50" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="50" />
+        </property>
+        <property name="pincode" type="string">
+            <column name="pincode" length="6" />
+        </property>
+        <property name="role" type="string">
+            <column name="role" length="1" not-null="true" />
+        </property>
+        <set name="orders" table="order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="emailid" length="50" not-null="true" />
+            </key>
+            <one-to-many class="model.Order" />
+        </set>
+        <set name="sharesForFromEmailid" table="share" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="from_emailid" length="50" not-null="true" />
+            </key>
+            <one-to-many class="model.Share" />
+        </set>
+        <set name="sharesForToEmailid" table="share" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="to_emailid" length="50" not-null="true" />
+            </key>
+            <one-to-many class="model.Share" />
+        </set>
+        <set name="warehouses" table="warehouse" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="wid" length="50" not-null="true" />
+            </key>
+            <one-to-many class="model.Warehouse" />
+        </set>
+    </class>
+</hibernate-mapping>

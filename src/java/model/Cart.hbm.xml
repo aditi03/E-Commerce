@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2017 11:28:08 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Cart" table="cart" catalog="ecommerce" optimistic-lock="version">
+        <composite-id name="id" class="model.CartId">
+            <key-property name="emailid" type="string">
+                <column name="emailid" length="50" />
+            </key-property>
+            <key-property name="pid" type="string">
+                <column name="pid" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="type" type="string">
+            <column name="type" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
